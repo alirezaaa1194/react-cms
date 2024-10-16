@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RecentMember from "./recentMember";
+import RecentMember from "./RecentMember.jsx";
 import RecentMemberSkeleton from "./RecentMemberSkeleton";
 import { getAllUsers } from "../../utils";
 

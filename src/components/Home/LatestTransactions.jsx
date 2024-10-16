@@ -16,7 +16,7 @@ export default function LatestTransactions() {
       <h2 className="text-xl font-bold">Latest transactions</h2>
       <div className="flex items-center">
         <span className="text-sm font-bold w-2/5">Customers</span>
-        <span className="text-sm font-bold w-1/5">Date</span>
+        <span className="text-sm font-bold w-1/5 hidden lg:block">Date</span>
         <span className="text-sm font-bold w-1/5">Amount</span>
         <span className="text-sm font-bold w-1/5">Status</span>
       </div>

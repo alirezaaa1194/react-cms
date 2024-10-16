@@ -243,7 +243,7 @@ export default function Products() {
                 </Button>
               </DropdownTrigger>
               <DropdownMenu>
-                <DropdownItem onClick={() => navigate(`/product/${user.id}`)}>Edit</DropdownItem>
+                <DropdownItem onClick={() => navigate(`/react-cms/product/${user.id}`)}>Edit</DropdownItem>
                 <DropdownItem onClick={() => deleteProductsHandler(user.id)}>Delete</DropdownItem>
               </DropdownMenu>
             </Dropdown>

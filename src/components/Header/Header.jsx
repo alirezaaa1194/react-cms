@@ -36,7 +36,7 @@ export default function Header(props) {
         </li>
 
         <li>
-          <img src="http://localhost:5173/public/images/john.jpg" className="w-12 h-12 rounded-full" alt="" />
+          <img src="./public/images/john.jpg" className="w-12 h-12 rounded-full" alt="" />
         </li>
       </ul>
       <button className="flex lg:hidden" onClick={props.onOpen}>

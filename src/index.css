@@ -18,4 +18,10 @@
   .bg-content1 {
     @apply shadow-primaryShadow;
   }
+  section div.relative:nth-child(2) {
+    @apply overflow-scroll lg:overflow-x-auto;
+  }
+  section div.relative:nth-child(2)::-webkit-scrollbar {
+    display: none;
+  }
 }

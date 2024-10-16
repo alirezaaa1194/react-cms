@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+@layer utilities {
+  aside::-webkit-scrollbar {
+    display: none;
+  }
+  aside ul li a.active {
+    @apply bg-[#F1F1FE];
+  }
+  .bg-content1 {
+    @apply shadow-primaryShadow;
+  }
+}

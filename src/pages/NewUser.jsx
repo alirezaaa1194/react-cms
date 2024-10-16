@@ -87,13 +87,13 @@ export default function NewUser() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4">
           <div className="flex flex-col gap-3">
             <div className="flex flex-col mt-2">
-              <Input type="text" value={username} onChange={(e) => setUsername(e.target.value.trim())} label="Username" />
+              <Input type="text" value={username} onChange={(e) => setUsername(e.target.value)} label="Username" />
             </div>
             <div className="flex flex-col mt-2">
-              <Input type="email" value={email} onChange={(e) => setEmail(e.target.value.trim())} label="Email" />
+              <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} label="Email" />
             </div>
             <div className="flex flex-col mt-2">
-              <Input type="phone" value={phone} onChange={(e) => setPhone(e.target.value.trim())} label="Phone" />
+              <Input type="phone" value={phone} onChange={(e) => setPhone(e.target.value)} label="Phone" />
             </div>
 
             <div className="flex flex-col mt-2">
@@ -114,13 +114,13 @@ export default function NewUser() {
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex flex-col mt-2">
-              <Input type="text" value={fullName} onChange={(e) => setFullName(e.target.value.trim())} label="FullName" />
+              <Input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} label="FullName" />
             </div>
             <div className="flex flex-col mt-2">
-              <Input type="text" value={password} onChange={(e) => setPassword(e.target.value.trim())} label="Password" />
+              <Input type="text" value={password} onChange={(e) => setPassword(e.target.value)} label="Password" />
             </div>
             <div className="flex flex-col mt-2">
-              <Input type="text" value={address} onChange={(e) => setAddress(e.target.value.trim())} label="Address" />
+              <Input type="text" value={address} onChange={(e) => setAddress(e.target.value)} label="Address" />
             </div>
 
             <div className="flex flex-col mt-2">

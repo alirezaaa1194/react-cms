@@ -17,15 +17,15 @@ export default function ProductInfo({ load, product }) {
             </li>
             <li className="flex items-center gap-14">
               <span className="text-sm w-14">price: </span>
-              <span className="text-sm text-[#C7C2C4]">{Number(product.price).toLocaleString()}</span>
+              <span className="text-sm text-[#C7C2C4]">{product.price}</span>
             </li>
             <li className="flex items-center gap-14">
               <span className="text-sm w-14">active: </span>
               <span className="text-sm text-[#C7C2C4]">{product.status}</span>
             </li>
             <li className="flex items-center gap-14">
-              <span className="text-sm w-14">in stock: </span>
-              <span className="text-sm text-[#C7C2C4]">{product.inStock}</span>
+              <span className="text-sm w-14">is stock: </span>
+              <span className="text-sm text-[#C7C2C4]">{product.isStock}</span>
             </li>
           </ul>
         </>

@@ -44,10 +44,11 @@ const getAllProducts = async () => {
   return datas;
 };
 
-const createProduct = async (productName, productPrice, productStatus) => {
+const createProduct = async (productName, productPrice, isStock, productStatus) => {
   let newProductInfo = {
     name: productName,
     price: Number(productPrice).toLocaleString(),
+    isStock,
     status: productStatus,
     profile: "https://cdn-icons-png.flaticon.com/512/9385/9385289.png",
   };
@@ -93,7 +94,7 @@ const updateProduct = async (productId, productName, productStatus, productStock
       profile: productProfile,
     }),
   });
-  return res
+  return res;
 };
 
 export { baseUrl, getAllUsers, createUser, deleteUser, getAllProducts, deleteProduct, getProductById, updateProduct, createProduct };

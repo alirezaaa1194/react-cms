@@ -212,7 +212,7 @@ export default function Users() {
               className="bg-primary text-background"
               endContent={<PlusIcon />}
               onClick={() => {
-                navigate("/NewUser");
+                navigate("/react-cms/NewUser");
               }}
               size="sm"
             >

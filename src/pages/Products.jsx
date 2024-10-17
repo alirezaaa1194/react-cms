@@ -50,14 +50,12 @@ export default function Products() {
   }, []);
 
   const deleteProductsHandler = (id) => {
-  let datas=  deleteProduct(id).then((res) => {
+    let datas = deleteProduct(id).then((res) => {
       setProducts((prevProducts) => prevProducts.filter((product) => product.id != id));
       if (res.status === 500) {
         return "product deleted successfully";
       }
     });
-
-
 
     toast.promise(datas, {
       pending: {
@@ -79,7 +77,6 @@ export default function Products() {
         },
       },
     });
-
   };
 
   // new product form modal
@@ -89,14 +86,16 @@ export default function Products() {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
   const [status, setStatus] = useState(["active", "paused", "vacation"]);
+  const [isStock, setIsStock] = useState(["yes", "no"]);
 
   const registerProductHandler = async () => {
     if (productName && productPrice && Array.from(status).join(", ")) {
-      let datas = createProduct(productName, productPrice, Array.from(status).join(", ")).then((res) => {
+      let datas = createProduct(productName, productPrice, Array.from(isStock).join(", "), Array.from(status).join(", ")).then((res) => {
         if (res.status === 500) {
           getProductsHandler();
           setProductName("");
           setProductPrice("");
+          setIsStock("");
           onClose();
 
           return "product added successfully";
@@ -148,6 +147,11 @@ export default function Products() {
                   <SelectItem key="active">active</SelectItem>
                   <SelectItem key="paused">paused</SelectItem>
                   <SelectItem key="vacation">vacation</SelectItem>
+                </Select>
+
+                <Select label="Select an isStock Status" selectedKeys={isStock} onSelectionChange={setIsStock}>
+                  <SelectItem key="yes">yes</SelectItem>
+                  <SelectItem key="no">no</SelectItem>
                 </Select>
               </ModalBody>
               <ModalFooter>
